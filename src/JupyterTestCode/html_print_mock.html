@@ -1,12 +1,35 @@
-	<table>
-        <tr>
-            <td>
-                <img src='"""+track['album']['images'][-1]['url']+"""'>
-            </td>
-            <td>
-                <b>"""+track['name']+"""</b>
-                <br>
-                <font color='grey'>"""+track['artists'][0]['name']+"""</font>
-            </td>
-        </tr>
-    </table>
+		<table style='width: 100%;padding: 0px; margin: 0px'>
+            <tr>
+                <td style='width: 64px;padding: 0px'>
+                    <img src='"""+track['album']['images'][-1]['url']+"""'>
+                </td>
+                <td style='text-align: left'>
+                    <b>"""+track['name']+"""</b>
+                    <br>
+                    <font color='grey'>"""+track['artists'][0]['name']+"""</font>
+                </td>
+                <td style='text-align: left'>
+                    <i>""" + feature_name + """</i>
+                    <br>
+                    <font color='red'>"""+feature[feature_name]+"""</font>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+                    <br>
+                    <font color='grey'>"""+track['artists'][0]['name']+"""</font>
+                </td>""" + 
+                 ''.join(['str("""<td style='text-align: left'>
+                    <i>""" + feature_name + """</i>
+                    <br>
+                    <font color='red'>""" + feature[feature_name] + """</font>
+                </td>""") for feature_name in feature']) +"""            </tr>
+        </table>"""))
+    return
+
+
+    <font color='red'>""") + str(feature[feature_name]) + str("""</font>
